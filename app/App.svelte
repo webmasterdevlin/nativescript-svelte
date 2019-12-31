@@ -16,10 +16,10 @@
       switch (result) {
         case "Mark completed":
           dones = [item, ...dones]; // Places the tapped active task at the top of the completed tasks.
-          todos = todos.filter(t => t != item); // Removes the tapped active  task.
+          todos = todos.filter(t => t !== item); // Removes the tapped active  task.
           break;
         case "Delete forever":
-          todos = todos.filter(t => t != item); // Removes the tapped active task.
+          todos = todos.filter(t => t !== item); // Removes the tapped active task.
           break;
         case "Cancel" || undefined: // Dismisses the dialog
           break;
@@ -44,10 +44,10 @@
       switch (result) {
         case "Mark To Do":
           todos = [item, ...todos]; // Places the tapped active task at the top of the completed tasks.
-          dones = dones.filter(t => t != item); // Removes the tapped active  task.
+          dones = dones.filter(t => t !== item); // Removes the tapped active  task.
           break;
         case "Delete forever":
-          dones = dones.filter(t => t != item); // Removes the tapped active task.
+          dones = dones.filter(t => t !== item); // Removes the tapped active task.
           break;
         case "Cancel" || undefined: // Dismisses the dialog
           break;
@@ -61,7 +61,7 @@
     font-size: 15;
     font-weight: bold;
     color: white;
-    background-color: crimson;
+    background-color: #581FE5;
     height: 40;
     margin-top: 10;
     margin-bottom: 10;
@@ -72,7 +72,7 @@
 
   textField {
     font-size: 20;
-    color: crimson;
+    color: #222;
     margin-top: 10;
     margin-bottom: 10;
     margin-right: 5;
@@ -88,11 +88,11 @@
 
   .todo-item.active {
     font-weight: bold;
-    color: crimson;
+    color: #3013AC;
   }
 
   .todo-item.completed {
-    color: #d3d3d3;
+    color: #424242;
     text-decoration: line-through;
   }
 </style>
